@@ -1,4 +1,10 @@
-import * as C from './styles';
+import {
+  Container,
+  MonthArea,
+  MonthArrow,
+  MonthTitle,
+  ResumeArea,
+} from './styles';
 import { formatCurrentMonth } from '../../helpers/dateFilter';
 import { ResumeItem } from '../ResumeItem';
 
@@ -30,13 +36,13 @@ export const InfoArea = ({
   };
 
   return (
-    <C.Container>
-      <C.MonthArea>
-        <C.MonthArrow onClick={handlePrevMonth}>⬅️</C.MonthArrow>
-        <C.MonthTitle>{formatCurrentMonth(currentMonth)}</C.MonthTitle>
-        <C.MonthArrow onClick={handleNextMonth}>➡️</C.MonthArrow>
-      </C.MonthArea>
-      <C.ResumeArea>
+    <Container>
+      <MonthArea>
+        <MonthArrow onClick={handlePrevMonth}>⬅️</MonthArrow>
+        <MonthTitle>{formatCurrentMonth(currentMonth)}</MonthTitle>
+        <MonthArrow onClick={handleNextMonth}>➡️</MonthArrow>
+      </MonthArea>
+      <ResumeArea>
         <ResumeItem title="Receitas" value={income} color="green" />
         <ResumeItem title="Despesas" value={expense} color="red" />
         <ResumeItem
@@ -44,7 +50,7 @@ export const InfoArea = ({
           value={income - expense}
           color={income - expense < 0 ? 'red' : 'green'}
         />
-      </C.ResumeArea>
-    </C.Container>
+      </ResumeArea>
+    </Container>
   );
 };
