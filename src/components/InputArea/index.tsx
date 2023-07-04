@@ -70,6 +70,7 @@ export const InputArea = ({ onAdd }: Props) => {
           <InputTitle>Data</InputTitle>
           <Input
             type="date"
+            placeholder="Data"
             value={dateField}
             onChange={(e) => setDateField(e.target.value)}
           ></Input>
@@ -78,12 +79,13 @@ export const InputArea = ({ onAdd }: Props) => {
           <InputTitle>Categoria</InputTitle>
           <Select
             value={categoryField}
+            placeholder="Categoria"
             onChange={(e) => setCategoryField(e.target.value)}
           >
             <>
               <option></option>
               {categoryKeys.map((key, index) => (
-                <option key={index} value={key}>
+                <option data-testid="select-option" key={index} value={key}>
                   {categories[key].title}
                 </option>
               ))}
@@ -94,6 +96,7 @@ export const InputArea = ({ onAdd }: Props) => {
           <InputTitle>Título</InputTitle>
           <Input
             type="text"
+            placeholder="Titulo"
             value={titleField}
             onChange={(e) => setTitleField(e.target.value)}
           ></Input>
@@ -102,6 +105,7 @@ export const InputArea = ({ onAdd }: Props) => {
           <InputTitle>Valor</InputTitle>
           <Input
             type="number"
+            placeholder="Valor"
             value={valueField}
             onChange={(e) => setValueField(parseFloat(e.target.value))}
           ></Input>

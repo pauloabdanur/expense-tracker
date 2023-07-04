@@ -36,7 +36,7 @@ export const InfoArea = ({
   };
 
   return (
-    <Container>
+    <Container data-testid="container">
       <MonthArea>
         <MonthArrow onClick={handlePrevMonth}>⬅️</MonthArrow>
         <MonthTitle>{formatCurrentMonth(currentMonth)}</MonthTitle>
