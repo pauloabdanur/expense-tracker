@@ -9,6 +9,7 @@ Save info to LocalStorage to prevent delete on refresh.
 ## Demo
 
 You can see how it works here!
+
 https://pauloabdanur.github.io/expense-tracker/
 
 ## Steps to run the project
